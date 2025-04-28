@@ -11,3 +11,4 @@ pydantic==2.5.3
 weasyprint==61.2        # keep if you like, 61.2 is fine
 pydyf==0.10.0           # 0.10.x is available on PyPI
 
+openlocationcode==1.0.4
