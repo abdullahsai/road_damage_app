@@ -93,6 +93,7 @@ img{max-width:200px;height:auto;}
 <h1>Road Damage Report</h1>
 <table>
 <thead>
+<tr><th>ID</th><th>Timestamp (UTC)</th><th>Type</th><th>Latitude</th><th>Longitude</th><th>Photo</th></tr>
 </thead>
 <tbody>
 {% for inc in incidents %}
