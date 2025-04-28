@@ -1,0 +1,6 @@
+# runtime artefacts
+images/
+report.pdf
+*.db
+__pycache__/
+*.pyc

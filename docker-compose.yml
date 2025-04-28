@@ -1,0 +1,31 @@
+# road_damage_app/docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: road_damage_backend
+    volumes:
+      - images:/app/images          # keeps photos outside the container
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:alpine
+    container_name: caddy
+    depends_on:
+      - backend
+    ports:
+      - "80:80"         # HTTP  → Caddy (for ACME challenge + redirect)
+      - "443:443"       # HTTPS → Caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile        # config
+      - ./frontend:/usr/share/caddy             # static site root
+      - caddy_data:/data                        # certs
+      - caddy_config:/config                    # configs
+    restart: unless-stopped
+
+volumes:
+  images:
+  caddy_data:
+  caddy_config:
+

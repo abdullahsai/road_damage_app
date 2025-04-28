@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Road Damage Reporter</title>
+<style>
+body{font-family:Arial, sans-serif;margin:20px;padding:0;}
+#status{width:20px;height:20px;border-radius:50%;background:#ccc;display:inline-block;margin-left:10px;}
+button,select{padding:10px 15px;font-size:16px;margin-top:10px;}
+#log{margin-top:20px;font-size:14px;}
+</style>
+</head>
+<body>
+<h1>Road Damage Reporter</h1>
+
+<button id="locBtn">1. Get Location</button><span id="status"></span>
+<div id="locInfo"></div>
+
+<input type="file" accept="image/*" capture="environment" id="photoInput" style="display:none;">
+
+<div id="damageTypeDiv" style="display:none;">
+<select id="damageType">
+<option value="signboard">Signboard</option>
+<option value="guardrail">Guardrail</option>
+</select><br/>
+<button id="submitBtn">3. Submit Report</button>
+</div>
+
+<pre id="log"></pre>
+
+<script src="app.js"></script>
+</body>
+</html>

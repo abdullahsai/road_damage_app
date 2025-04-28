@@ -1,0 +1,14 @@
+# road_damage_app/Caddyfile
+report.khaburah.online {
+
+    # ── Basic static-file setup ─────────────────────────────
+    encode gzip                    # compress everything
+    root * /usr/share/caddy        # serves the ./frontend directory you mounted
+    file_server                    # enables static-site delivery
+
+    # ── Backend routes (prefix kept) ────────────────────────
+    reverse_proxy /api/*    backend:8000
+    reverse_proxy /images/* backend:8000
+    reverse_proxy /report*  backend:8000
+}
+
