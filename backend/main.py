@@ -93,7 +93,6 @@ img{max-width:200px;height:auto;}
 <h1>Road Damage Report</h1>
 <table>
 <thead>
-<tr><th>ID</th><th>Timestamp (UTC)</th><th>Type</th><th>Latitude</th><th>Longitude</th><th>Acc (m)</th><th>Photo</th></tr>
 </thead>
 <tbody>
 {% for inc in incidents %}
@@ -103,7 +102,6 @@ img{max-width:200px;height:auto;}
     <td>{{ inc.damage_type }}</td>
     <td>{{ '%.6f' % inc.latitude }}</td>
     <td>{{ '%.6f' % inc.longitude }}</td>
-    <td>{{ '%.1f' % inc.accuracy }}</td>
     <td><img src="images/{{ inc.image_filename }}"></td>
   </tr>
 {% endfor %}
