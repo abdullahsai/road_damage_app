@@ -4,3 +4,4 @@ report.pdf
 *.db
 __pycache__/
 *.pyc
+*.bak
