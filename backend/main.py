@@ -86,12 +86,12 @@ img{max-width:200px;height:auto;}
 <h1>Road Damage Report</h1>
 <table>
 <thead>
-<tr><th>ID</th><th>Timestamp (UTC)</th><th>Type</th><th>Plus Code</th><th>Photo</th></tr>
+<tr><th>ID</th><th>Date</th><th>Type</th><th>Plus Code</th><th>Photo</th></tr>
 </thead><tbody>
 {% for inc in rows %}
 <tr>
   <td>{{ inc.id }}</td>
-  <td>{{ inc.timestamp }}</td>
+  <td>{{ inc.timestamp.date() }}</td>
   <td>{{ inc.damage_type }}</td>
   <td>{{ inc.pluscode or "" }}</td>
   <td><img src="images/{{ inc.image_filename }}"></td>
