@@ -8,6 +8,7 @@ A tiny self‑hosted web app that lets a single user log damaged signboards or g
 * **GPS accuracy check** – indicator turns green when < 5 m horizontal accuracy.
 * **Camera capture** – take a photo right inside the browser (`input type=file` capture).
 * **Damage type selector** – choose *guardrail* or *signboard*.
+  * Location stored as Google **Plus Code** instead of raw latitude/longitude.
 * **Offline-friendly** – everything runs in your container, no external APIs.
 * **Report generator** – view `/report` or download `/report/pdf`.
 * **One‑click deploy** – Docker Compose builds backend (FastAPI) + frontend (NGINX).
