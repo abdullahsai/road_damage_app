@@ -93,7 +93,7 @@ img{max-width:200px;height:auto;}
   <td>{{ inc.id }}</td>
   <td>{{ inc.timestamp }}</td>
   <td>{{ inc.damage_type }}</td>
-  <td><a href="https://maps.google.com/?q={{ inc.pluscode }}" target="_blank">{{ inc.pluscode }}</a></td>
+  <td>{{ inc.pluscode or "" }}</td>
   <td><img src="images/{{ inc.image_filename }}"></td>
 </tr>
 {% endfor %}
