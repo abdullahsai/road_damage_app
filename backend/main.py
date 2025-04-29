@@ -76,6 +76,7 @@ def render_html():
     db.close()
     tpl = '''
 <!DOCTYPE html><html><head><meta charset="utf-8">
+<style>table{border-collapse:collapse;width:100%;}th,td{border:2px solid #000;padding:8px;text-align:center;vertical-align:middle;}th{background:#f2f2f2;}img{max-width:250px;height:auto;display:block;margin:auto;}</style>
 <title>Road Damage Report</title>
 <style>
 body{font-family:Arial, sans-serif;margin:40px;}
